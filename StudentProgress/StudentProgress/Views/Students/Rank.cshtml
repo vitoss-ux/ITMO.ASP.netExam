@@ -1,0 +1,92 @@
+﻿@model StudentProgress.Models.Student
+
+@{
+    ViewBag.Title = "Rank";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>5 лучших студентов</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecondName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+    </tr>
+
+    @foreach (var item in ViewBag.Top)
+    {
+        <tr>
+            <td>
+                @item.FirstName
+            </td>
+            <td>
+                @item.SecondName
+            </td>
+            <td>
+                @item.GroupNumber
+            </td>
+            <td>
+                @item.Course
+            </td>
+            <td>
+                @item.Grade
+            </td>
+        </tr>
+    }
+</table>
+
+<h2>5 худших студентов</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecondName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+    </tr>
+
+    @foreach (var item in ViewBag.Worth)
+    {
+        <tr>
+            <td>
+                @item.FirstName
+            </td>
+            <td>
+                @item.SecondName
+            </td>
+            <td>
+                @item.GroupNumber
+            </td>
+            <td>
+                @item.Course
+            </td>
+            <td>
+                @item.Grade
+            </td>
+        </tr>
+    }
+</table>
